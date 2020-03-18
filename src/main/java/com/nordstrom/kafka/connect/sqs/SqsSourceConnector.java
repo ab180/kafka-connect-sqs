@@ -27,7 +27,7 @@ import org.apache.kafka.connect.source.SourceConnector ;
 import org.slf4j.Logger ;
 import org.slf4j.LoggerFactory ;
 
-import com.nordstrom.kafka.connect.About ;
+import com.nordstrom.kafka.connect.About;
 
 public class SqsSourceConnector extends SourceConnector {
   private final Logger log = LoggerFactory.getLogger( this.getClass() ) ;

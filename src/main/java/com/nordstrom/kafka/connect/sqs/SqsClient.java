@@ -34,6 +34,8 @@ import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageResult;
+import com.nordstrom.kafka.connect.utils.Facility;
+import com.nordstrom.kafka.connect.utils.Guard;
 
 public class SqsClient {
   private final Logger log = LoggerFactory.getLogger(this.getClass());

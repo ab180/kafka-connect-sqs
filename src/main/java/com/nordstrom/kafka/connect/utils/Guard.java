@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.nordstrom.kafka.connect.sqs ;
+package com.nordstrom.kafka.connect.utils ;
 
 import java.net.MalformedURLException ;
 import java.net.URISyntaxException ;

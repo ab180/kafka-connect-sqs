@@ -30,6 +30,7 @@ import org.slf4j.LoggerFactory ;
 
 import com.amazonaws.services.sqs.model.Message ;
 import com.nordstrom.kafka.connect.About ;
+import com.nordstrom.kafka.connect.utils.Guard;
 
 public class SqsSourceConnectorTask extends SourceTask {
   private final Logger log = LoggerFactory.getLogger( this.getClass() ) ;

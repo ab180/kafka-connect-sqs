@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nordstrom.kafka.connect.sqs ;
+package com.nordstrom.kafka.connect.utils;
 
 import java.util.Optional ;
 
