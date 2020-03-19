@@ -8,10 +8,7 @@ plugins {
 }
 
 repositories {
-    mavenLocal()
-    maven {
-        url = 'http://repo.maven.apache.org/maven2'
-    }
+    mavenCentral()
 }
 
 dependencies {
@@ -22,10 +19,26 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
-group = 'com.nordstrom.kafka.connect.sqs'
+group = 'com.nordstrom.kafka.connect'
 version = '1.1.0'
 description = 'Kafka Connect SQS Sink/Source Connector'
 sourceCompatibility = '1.8'
+
+sourceSets {
+  main.java.srcDirs += "$buildDir/generated/sources/java-templates/java/main"
+}
+
+compileJava {
+  dependsOn 'copyJavaTemplates'
+}
+
+task copyJavaTemplates(type: Copy) {
+  from 'src/main/java-templates'
+  into "$buildDir/generated/sources/java-templates/java/main"
+  expand(project.properties)
+  filteringCharset = 'UTF-8'
+}
+
 
 java {
     withSourcesJar()
