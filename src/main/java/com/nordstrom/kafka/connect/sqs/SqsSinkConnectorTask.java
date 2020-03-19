@@ -25,6 +25,8 @@ import org.apache.kafka.connect.sink.SinkTask ;
 import org.slf4j.Logger ;
 import org.slf4j.LoggerFactory ;
 
+import com.nordstrom.kafka.connect.utils.Facility;
+import com.nordstrom.kafka.connect.utils.Guard;
 import com.nordstrom.kafka.connect.sqs.SqsSinkConnector ;
 
 public class SqsSinkConnectorTask extends SinkTask {
